@@ -306,25 +306,25 @@
         <details class="card-details"><summary>Why we recommend this</summary><div class="details-body">It's an explicit opt-in because it uses AI analysis, governed by the CyberNut AI Data Policy. Until it's on, internal phishing won't flag any account.<br><br><strong>Where:</strong> Settings → Compromised Accounts tab</div></details>
       </div>
       <div class="setup-card"><h3>Flag score threshold<span class="pill new">New</span></h3><span class="rec value">80 (default)</span><div class="plan">All plans</div>
-        <details class="card-details"><summary>Should I change it?</summary><div class="details-body">Start at 80. Lower it to catch internal scams the AI scores below 80. At 0, every internal Phishing verdict flags the account. A lower number means more flags, and more suspensions if auto-suspend is on.</div></details>
+        <details class="card-details"><summary>Should I change it?</summary><div class="details-body">Start at 80. Lower it to catch internal scams the AI scores below 80. At 0, every internal Phishing verdict flags the account. Scores run from 0 to 100, and higher means riskier. Your threshold also decides when auto-suspend applies, so a lower number means more flags and more suspensions if auto-suspend is on.</div></details>
       </div>
       <div class="setup-card"><h3>Admin email alerts</h3><span class="rec on">Recommended on</span><div class="plan">All plans</div>
         <details class="card-details"><summary>Why we recommend this</summary><div class="details-body">Your team hears about a flagged account the moment it happens. Use Edit Template so alerts read in your district's voice and land with the right urgency.</div></details>
       </div>
       <div class="setup-card"><h3>Alert recipients<span class="pill new">New</span></h3><span class="rec value">Your list</span><div class="plan">All plans</div>
-        <details class="card-details"><summary>How it works</summary><div class="details-body">Enter the addresses that should get compromised account alerts, separated by commas. Leave it empty and alerts go to your CyberNut alerts address, which is set on the Report Button tab.</div></details>
+        <details class="card-details"><summary>How it works</summary><div class="details-body">Enter up to 10 addresses that should get compromised account alerts, separated by commas. Leave it empty and alerts go to your CyberNut alerts address, which is set on the Report Button tab.</div></details>
       </div>
       <div class="setup-card"><h3>Auto-suspend on detection</h3><span class="rec decision">District decision</span><div class="plan">All plans · Off by default</div>
-        <details class="card-details"><summary>What to consider</summary><div class="details-body">Suspends the account the instant it's flagged. You can reinstate access anytime from CyberNut or from your Google or Microsoft admin console. Work through Step 3 before you turn it on.</div></details>
+        <details class="card-details"><summary>What to consider</summary><div class="details-body">Locks the account the instant it's flagged, for both Google and Microsoft accounts. Only accounts at or above your score threshold are suspended. IT admins are notified, and the user has to contact IT to reset their password. You can reinstate access anytime from CyberNut or from your Google or Microsoft admin console. Work through Step 3 before you turn it on.</div></details>
       </div>
       <div class="setup-card"><h3>Confirm your Threat Manager admins</h3><span class="rec todo">Do this first</span><div class="plan">Outside settings</div>
         <details class="card-details"><summary>Why it matters</summary><div class="details-body">These admins receive alerts and perform reinstatements. Make sure the right people are on the list.</div></details>
       </div>
       <div class="setup-card"><h3>Brief your help desk</h3><span class="rec todo">Do this first</span><div class="plan">Outside settings</div>
-        <details class="card-details"><summary>Why it matters</summary><div class="details-body">A suspended user's first call is "I'm locked out." The desk should check Compromised Accounts before treating it as a routine password reset.</div></details>
+        <details class="card-details"><summary>Why it matters</summary><div class="details-body">A suspended user has to contact IT to reset their password, so their first call is "I'm locked out." The desk should check Compromised Accounts before treating it as a routine password reset.</div></details>
       </div>
       <div class="setup-card"><h3>Suspend exceptions<span class="pill new">New</span></h3><span class="rec decision">Optional</span><div class="plan">All plans · Used with auto-suspend</div>
-        <details class="card-details"><summary>When to use it</summary><div class="details-body">Add mailboxes that should never be auto-suspended, even on a BEC verdict. Use it for leadership or shared mailboxes, where an automatic suspension would cause the most disruption.<br><br><strong>Where:</strong> Settings → Compromised Accounts → Auto suspend → Add exception</div></details>
+        <details class="card-details"><summary>When to use it</summary><div class="details-body">Add mailboxes that should never be auto-suspended, even on a BEC verdict. Use it for leadership or shared mailboxes, where an automatic suspension would cause the most disruption. Excepted accounts are still flagged, and IT admins are still alerted, so a person decides what happens next.<br><br><strong>Where:</strong> Settings → Compromised Accounts → Auto suspend → Add exception</div></details>
       </div>
     </div>
   </section>
@@ -368,7 +368,7 @@
       <div class="action-card phish">
         <div class="situation">Smaller district, lean IT</div>
         <div class="action">Turn auto-suspend on</div>
-        <ul><li>The attacker is cut off the moment the account is flagged.</li><li>Covers 2 a.m. on a Saturday.</li><li>A compromise at 9 p.m. Friday doesn't get a 60-hour head start.</li></ul>
+        <ul><li>The attacker is cut off the moment the account is flagged.</li><li>Covers 2 a.m. on a Saturday.</li><li>Only accounts at or above your score threshold are suspended.</li><li>A compromise at 9 p.m. Friday doesn't get a 60-hour head start.</li></ul>
       </div>
     </div>
     <div class="banner">Either way, revisit your choice after your first real incident.</div>
@@ -387,7 +387,7 @@
       <div class="review-item"><strong>Score</strong><span>How severe the email is. Higher is worse. Treat 80 and above as act now.</span></div>
       <div class="review-item"><strong>Key Evidence</strong><span>The signals behind the Phishing verdict. Share this with your CTO or superintendent.</span></div>
       <div class="review-item"><strong>Recommended Actions</strong><span>Immediate steps, staff awareness steps, and policy suggestions for this email.</span></div>
-      <div class="review-item"><strong>Actions taken<span class="pill new">New</span></strong><span>Actions taken on the account now show in the Compromised Accounts view.</span></div>
+      <div class="review-item"><strong>Reported Actions<span class="pill new">New</span></strong><span>Shows what each person who reported the email did with it.</span></div>
       <div class="review-item"><strong>Account status</strong><span>Whether the account is flagged only or already suspended.</span></div>
       <div class="review-item"><strong>Audit log</strong><span>Actions labeled CyberNut were automated. Actions with a name were manual.</span></div>
     </div>
@@ -471,7 +471,7 @@
       <details><summary>We can't turn on Compromised Account Detection</summary><div class="details-body"><p>The API permissions are usually missing or still processing.</p><ul><li>Google: confirm both OAuth scopes are on the CyberNut entry in Domain Wide Delegation. It can take up to 24 hours after you add them.</li><li>Microsoft: confirm every permission in the Azure portal shows Granted, including admin consent.</li></ul></div></details>
       <details><summary>A user says they're locked out</summary><div class="details-body"><p>Check Compromised Accounts before treating it as a routine password reset. If the account was auto-suspended, verify it's clean, then follow the reinstatement steps.</p></div></details>
       <details><summary>A legitimate internal blast got reported</summary><div class="details-body"><p>Nothing fires. An account is only flagged when the AI returns a Phishing verdict at or above your threshold. Emails about stipends, prom, or athletics won't flag anyone unless the AI calls them phishing.</p></div></details>
-      <details><summary>Alerts aren't reaching the right people</summary><div class="details-body"><p>Add the right addresses to Send compromised account alerts to, separated by commas. If that field is empty, alerts go to the CyberNut alerts address on the Report Button tab.</p></div></details>
+      <details><summary>Alerts aren't reaching the right people</summary><div class="details-body"><p>Add the right addresses to Send compromised account alerts to, separated by commas. You can add up to 10. If that field is empty, alerts go to the CyberNut alerts address on the Report Button tab.</p></div></details>
       <details><summary>We're missing internal scams that score lower</summary><div class="details-body"><p>Lower the flag score threshold below 80. Expect more flagged accounts, and more suspensions if auto-suspend is on.</p></div></details>
       <details><summary>Leadership asks who disabled an account</summary><div class="details-body"><p>Open the audit log. Actions labeled CyberNut were automated. Actions with a name were taken by that admin.</p></div></details>
       <details><summary>Staff forwarded the email to IT instead of reporting it</summary><div class="details-body"><p>Forwarding replaces the sender, so the internal domain check fails and nothing is flagged. Ask the original recipients to use the Report button.</p></div></details>
