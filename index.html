@@ -251,7 +251,7 @@
         <p>A teacher's mass email about stipends or prom tickets won't flag anyone. Staff can report it all day, but unless the AI classifies it as phishing at or above your threshold, the account is not flagged and not suspended.</p>
         <details class="card-details">
           <summary>What does suspend actually do?</summary>
-          <div class="details-body">It deactivates the account in Google or Microsoft and ends every active session. The user and the attacker are logged out everywhere, not only from email.</div>
+          <div class="details-body">It deactivates the account in Google or Microsoft and ends every active session. The user and the attacker are logged out everywhere, not only from email.<br><br><strong>In Microsoft 365,</strong> CyberNut acts directly through Microsoft's APIs. It disables the account, signs the user out of every session and device, and revokes their sign-in tokens. It also changes the password to a random value that CyberNut does not store. The attacker loses access right away and can't sign back in.</div>
         </details>
         <details class="card-details">
           <summary>Do I need ATT for this?</summary>
@@ -295,7 +295,7 @@
             <li>Click Grant Admin Consent, next to Add a permission.</li>
             <li>Check that every permission shows Granted.</li>
           </ol>
-          <p>Suspension in Microsoft 365 runs through the Microsoft Graph API.</p>
+          <p>These permissions let CyberNut suspend an account directly through Microsoft's APIs. Suspension disables the account, revokes sign-in tokens on every device, and sets a random password that CyberNut does not store.</p>
           <a class="link" href="https://knowledgebase.cybernut.com/cybernut-knowledge-base/how-do-i-set-api-permissions-in-the-microsoft-azure-portal" target="_blank" rel="noopener">Microsoft setup steps on the Knowledge Hub →</a>
         </div>
       </div>
@@ -425,7 +425,7 @@
 
     <h3 class="sub-head">If an internal account is phishing your staff right now</h3>
     <div class="steps urgent">
-      <div class="step"><div class="step-num">1</div><h3>Suspend</h3><p>Ends every active session so the attacker can't send another email.</p></div>
+      <div class="step"><div class="step-num">1</div><h3>Suspend</h3><p>Ends every active session so the attacker can't send another email. In Microsoft 365, it also revokes sign-in tokens and sets a random password.</p></div>
       <div class="step"><div class="step-num">2</div><h3>Search</h3><p>Open the case, then Advanced Threat Search. Set the time frame to cover the blast.</p>
         <details class="card-details"><summary>Why search?</summary><div class="details-body">It reaches every inbox that received the email, not only the people who reported it.</div></details></div>
       <div class="step"><div class="step-num">3</div><h3>Delete</h3><p>Delete the case to remove the email from every affected inbox before more people click.</p></div>
@@ -437,7 +437,7 @@
     <div class="steps">
       <div class="step"><div class="step-num">1</div><h3>Verify</h3><p>Confirm it's contained: bad emails deleted, no forwarding rules or other leftovers.</p></div>
       <div class="step"><div class="step-num">2</div><h3>Reinstate</h3><p>Choose Reinstate from the dropdown on the account entry.</p></div>
-      <div class="step"><div class="step-num">3</div><h3>Get the password</h3><p>CyberNut sets a new password and shows it to you. The old one no longer works.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Get the password</h3><p>CyberNut generates a new password and shows it to you. The attacker's copy of the old password no longer works.</p></div>
       <div class="step"><div class="step-num">4</div><h3>Hand it off</h3><p>Give it to the user in person or by phone.</p>
         <details class="card-details"><summary>Why not email?</summary><div class="details-body">If the mailbox was compromised, emailing the password hands the attacker the new key.</div></details></div>
       <div class="step"><div class="step-num">5</div><h3>User resets</h3><p>The user must change it at first login, so the password only works once.</p></div>
@@ -488,9 +488,9 @@
     </div>
     <div class="tips">
       <div class="tip"><h3>Permissions come first</h3><p>Grant the Google scopes or Microsoft permissions before you try to enable detection.</p></div>
-      <div class="tip"><h3>Suspend means everywhere</h3><p>It deactivates the account and ends every session, not only email.</p></div>
+      <div class="tip"><h3>Suspend means everywhere</h3><p>It deactivates the account and ends every session, not only email. In Microsoft 365, it signs the user out on every device and revokes sign-in tokens.</p></div>
       <div class="tip"><h3>Trust but verify the score</h3><p>80 or higher with clean evidence means act now. Otherwise, read the evidence first.</p></div>
-      <div class="tip"><h3>Never email the password</h3><p>Hand off reinstatement passwords in person or by phone.</p></div>
+      <div class="tip"><h3>CyberNut never keeps the password</h3><p>In Microsoft 365, suspension sets a random password that CyberNut doesn't store. Reinstating creates a new one. Hand it off in person or by phone.</p></div>
       <div class="tip"><h3>Reinstate isn't a full restore</h3><p>Re-provision MFA and downstream access yourself.</p></div>
       <div class="tip"><h3>Set a review cadence</h3><p>Check Compromised Accounts daily for the first month, then weekly, plus on every alert.</p></div>
     </div>
